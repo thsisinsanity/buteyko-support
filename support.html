@@ -11,9 +11,47 @@
             background: #071A19;
             color: #c8ddd9;
             line-height: 1.7;
-            padding: 40px 20px;
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(0, 229, 204, 0.12);
+            padding: 0 20px;
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 10;
+        }
+        .nav-inner {
             max-width: 680px;
             margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 56px;
+        }
+        .nav-brand {
+            color: #00E5CC;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: -0.3px;
+        }
+        .nav-brand:hover { text-decoration: none; opacity: 0.85; }
+        .nav-links { display: flex; gap: 28px; }
+        .nav-links a {
+            color: #8BB5AE;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: #00E5CC; text-decoration: none; }
+        .nav-links a.active { color: #00E5CC; }
+        .content {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
         h1 {
             color: #00E5CC;
@@ -65,15 +103,30 @@
             color: #8BB5AE;
             font-size: 14px;
         }
-        .nav {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.06);
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
             font-size: 13px;
+            color: #5A8A82;
         }
+        .footer a { color: #5A8A82; }
+        .footer a:hover { color: #00E5CC; }
     </style>
 </head>
 <body>
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">Buteyko</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="support.html" class="active">Support</a>
+                <a href="privacy.html">Privacy</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
     <h1>Buteyko Support</h1>
     <p class="subtitle">We're here to help you breathe better.</p>
 
@@ -121,8 +174,12 @@
         <p>Every 2 weeks. The app will remind you when it's time to retest so you can track your progress over time.</p>
     </div>
 
-    <div class="nav">
-        <a href="privacy.html">Privacy Policy</a>
+    </div>
+
+    <div class="footer">
+        <a href="support.html">Support</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy Policy</a>
+        <br><br>
+        &copy; 2026 Buteyko
     </div>
 </body>
 </html>
