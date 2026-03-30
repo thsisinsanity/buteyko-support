@@ -116,6 +116,48 @@
             transition: opacity 0.2s;
         }
         .cta-badge:hover { opacity: 0.85; text-decoration: none; }
+        .screenshots {
+            padding: 20px 0 60px;
+        }
+        .screenshots h2 {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .screenshot-grid {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding: 0 20px 16px;
+        }
+        .screenshot-grid::-webkit-scrollbar { display: none; }
+        .screenshot-item {
+            flex: 0 0 auto;
+            scroll-snap-align: center;
+            text-align: center;
+        }
+        .screenshot-item img {
+            width: 220px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .screenshot-item p {
+            color: #5A8A82;
+            font-size: 12px;
+            margin-top: 12px;
+            font-weight: 500;
+        }
+        @media (min-width: 900px) {
+            .screenshot-grid {
+                justify-content: center;
+                overflow-x: visible;
+            }
+        }
         .footer {
             text-align: center;
             padding: 32px 20px;
@@ -165,6 +207,28 @@
             <div class="feature">
                 <h3>100% Private</h3>
                 <p>All data stays on your device. No accounts, no tracking, no cloud.</p>
+            </div>
+        </div>
+
+        <div class="screenshots">
+            <h2>See it in action</h2>
+            <div class="screenshot-grid">
+                <div class="screenshot-item">
+                    <img src="screenshot-home.png" alt="Buteyko home screen" loading="lazy">
+                    <p>Home</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="screenshot-directions.png" alt="Exercise directions" loading="lazy">
+                    <p>Guided Exercises</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="screenshot-progress.png" alt="Progress tracking" loading="lazy">
+                    <p>Track Progress</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="screenshot-pro.png" alt="Pro features" loading="lazy">
+                    <p>Buteyko Pro</p>
+                </div>
             </div>
         </div>
 
